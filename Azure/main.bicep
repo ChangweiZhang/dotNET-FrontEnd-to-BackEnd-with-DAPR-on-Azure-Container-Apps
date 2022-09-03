@@ -38,9 +38,9 @@ var shared_config = [
 
 // create the products api container app
 module products 'container_app.bicep' = {
-  name: 'products'
+  name: 'daprproducts'
   params: {
-    name: 'products'
+    name: 'daprproducts'
     location: location
     registryPassword: acr.listCredentials().passwords[0].value
     registryUsername: acr.listCredentials().username
@@ -53,9 +53,9 @@ module products 'container_app.bicep' = {
 
 // create the inventory api container app
 module inventory 'container_app.bicep' = {
-  name: 'inventory'
+  name: 'daprinventory'
   params: {
-    name: 'inventory'
+    name: 'daprinventory'
     location: location
     registryPassword: acr.listCredentials().passwords[0].value
     registryUsername: acr.listCredentials().username
@@ -68,9 +68,9 @@ module inventory 'container_app.bicep' = {
 
 // create the store api container app
 module store 'container_app.bicep' = {
-  name: 'store'
+  name: 'daprstore'
   params: {
-    name: 'store'
+    name: 'daprstore'
     location: location
     registryPassword: acr.listCredentials().passwords[0].value
     registryUsername: acr.listCredentials().username
